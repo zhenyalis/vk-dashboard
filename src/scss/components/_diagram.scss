@@ -1,0 +1,37 @@
+.diagram {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: auto;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 3;
+  grid-column-end: 3;
+  height: 242px;
+  background: #ffffff;
+  border-radius: $rounded;
+  padding-left: 5%;
+  
+
+  &__title {
+    display: grid;
+    justify-self: start;
+    font-size: 20px;
+    line-height: 100%;
+    align-content: center;
+    grid-column: span 2;
+  }
+  &__checkbox--desktop {
+    display: grid;
+    width: 16px;
+    height: 16px;
+    border-radius: 5px;
+    background-color: #e786d7;
+  }
+  &__checkbox--mobole {
+    display: grid;
+    width: 16px;
+    height: 16px;
+    border-radius: 5px;
+    background-color: #7f7fd5;
+  }
+}

@@ -1,0 +1,45 @@
+.geo-progress {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+ 
+  margin-left: auto;
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 3;
+  align-content: space-evenly;
+  padding-left: 5%;
+  background: #ffffff;
+  border-radius: $rounded;
+  width: 381px;
+
+  &__title {
+    display: grid;
+    justify-self: start;
+    font-size: 20px;
+    line-height: 100%;
+  }
+  &__country {
+    display:grid;
+    font-size: 12px;
+    line-height: 100%;
+    color: #4f4f4f;
+
+    justify-content: end;
+  }
+  &__city {
+    display:grid;
+    font-size: 12px;
+    line-height: 100%;
+    color: #979797;
+    justify-items: center;
+    grid-column: span 2;
+  }
+  &__img {
+    grid-column: span 3;
+  }
+}
+.description {display: grid;
+  grid-column: span 2;
+  grid-row: span 2;
+}

@@ -1,0 +1,44 @@
+.bar-graph {
+  width: 690px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  background: #ffffff;
+  border-radius: $rounded;
+  padding-left: 5%;
+  align-items: center;
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+ 
+ 
+  &__title {
+    display: grid;
+    justify-self: start;
+    font-size: 20px;
+    line-height: 100%;
+  }
+  &__checkbox {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 3;
+    grid-column-end: 3;
+  }
+}
+.bar-graph__image {
+  grid-column: span 2;
+}
+.bar-graph__checkbox--women {
+
+  width: 16px;
+  height: 16px;
+  border-radius: 5px;
+  background-color: #e786d7;
+}
+.bar-graph__checkbox--men {
+  width: 16px;
+  height: 16px;
+  border-radius: 5px;
+  background-color: #7f7fd5;
+}

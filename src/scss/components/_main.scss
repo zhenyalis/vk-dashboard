@@ -1,0 +1,13 @@
+.main {
+  display: grid;
+
+  grid-template-columns: repeat(3, 324px);
+  grid-template-rows: (148px 242px 242px);
+  column-gap: 35px;
+  row-gap: 35px;
+  background: #eff3f9;
+  grid-area: main;
+  border-radius: 0 0 $rounded 0;
+  padding-left: 30px;
+ 
+}

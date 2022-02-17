@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./scss/index.scss" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- nav -->
+      <nav class="nav">
+        <img class="nav__logo" src="./assets/nav/logotype.svg" />
+        <div class="nav__links">
+          <a class="nav__link" href="/"><img src="./assets/nav/home.svg" /> </a>
+          <a class="nav__link" href="/"><img src="./assets/nav/news.svg" /></a>
+          <a class="nav__link" href="/"
+            ><img src="./assets/nav/people.svg"
+          /></a>
+          <a class="nav__link" href="/"
+            ><img src="./assets/nav/message.svg"
+          /></a>
+          <a class="nav__link" href="/"><img src="./assets/nav/play.svg" /></a>
+          <a class="nav__link" href="/"
+            ><img src="./assets/nav/statistics.svg"
+          /></a>
+          <a class="nav__link" href="/"
+            ><img src="./assets/nav/settings.svg"
+          /></a>
+        </div>
+        
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        
+      </nav>
+      <!-- header -->
+      <heder class="header">
+        <div class="header__search-form">
+          <h1 class="header__title">Statistics</h1>
+          <input class="header__search" type="search" />
+          <img class="header__img" src="./assets/header/bell.png" alt="/" />
+        </div>
+
+        <div class="header__profile">
+          <p class="header__user-name">Anya</p>
+          <img
+            class="header__avatar"
+            src="./assets/header/avatar.png"
+            alt="/"
+          />
+        </div>
+      </heder>
+      <!-- main -->
+      <main class="main">
+        <div class="card">
+          <h2 class="card__title">Friends</h2>
+          <button class="card__menu-btn">
+            <img
+              class="header__menu"
+              src="./assets/main/three-dots.svg"
+              alt="/"
+            />
+          </button>
+          <span class="card__info">271 people</span>
+          <span class="card__statistics">
+            +0.7%
+            <img class="header__menu" src="./assets/main/arrow-up.png" alt="/"
+          /></span>
+        </div>
+        <div class="card">
+          <h2 class="card__title">Unique visitors</h2>
+          <button class="card__menu-btn">
+            <img
+              class="header__menu"
+              src="./assets/main/three-dots.svg"
+              alt="/"
+            />
+          </button>
+          <span class="card__info">69 people</span>
+          <span class="card__statistics"
+            >-1.7%
+            <img class="header__menu" src="./assets/main/arrow-up.png" alt="/"
+          /></span>
+        </div>
+        <div class="card">
+          <h2 class="card__title">Followers</h2>
+
+          <button class="card__menu-btn">
+            <img
+              class="header__menu"
+              src="./assets/main/three-dots.svg"
+              alt="/"
+            />
+          </button>
+          <span class="card__info">288 people</span>
+          <span class="card__statistics"
+            >+1%
+            <img
+              class="header__menu"
+              src="./assets/main/arrow-down.png"
+              alt="/"
+          /></span>
+        </div>
+        <div class="shedule">
+          <h2 class="shedule__title">Audience reach</h2>
+          <span class="shedule__calendar">31/01/2020 – 06/02/2020</span>
+          <div class="shedule__checkbox">
+            <input class="shedule__checkbox--total" type="checkbox" />
+            <label for="total">Total</label>
+            <input class="shedule__checkbox--follower" type="checkbox" />
+            <label for="follower">Follower</label>
+          </div>
+          <img class="shedule__img" src="./assets/main/shedule.png" alt="" />
+        </div>
+        <div class="diagram">
+          <h2 class="diagram__title">Reach by device</h2>
+          <img src="./assets/main/diagram.png" alt="/" />
+          <div class="diagram__checkbox">
+            <input class="diagram__checkbox--desktop" />
+            <label for="desktop">Desktop</label>
+            <input class="diagram__checkbox--mobole" />
+            <label for="mobole-views">Mobole views</label>
+          </div>
+        </div>
+        <div class="bar-graph">
+          <h2 class="bar-graph__title">Gender / Age</h2>
+          <div class="bar-graph__checkbox">
+            <input class="bar-graph__checkbox--women" type="checkbox" />
+            <label for="women">women</label>
+            <input class="bar-graph__checkbox--men" type="checkbox" />
+            <label for="men">men</label>
+          </div>
+          <img
+            class="bar-graph__image"
+            src="./assets/main/bar-graph.png"
+            alt=""
+          />
+        </div>
+        <div class="geo-progress">
+          <h2 class="geo-progress__title">Geo</h2>
+          <span class="geo-progress__country">Country</span>
+          <span class="geo-progress__city">City</span>
+
+          <div class="geo-progress__ruusia">
+            <label for="file">Russia</label>
+            <progress id="file" max="100" value="94">94%</progress>
+          </div>
+          <div class="geo-progress__china">
+            <label for="file">China</label>
+            <progress id="file" max="100" value="0.26">0.26%</progress>
+          </div>
+          <div class="geo-progress__ukraine">
+            <label for="file">Ukraine</label>
+            <progress id="file" max="100" value="0.20">0.20%</progress>
+          </div>
+          <div class="geo-progress__usa">
+            <label for="file">USA </label>
+            <progress id="file" max="100" value="0.20">0.20%</progress>
+          </div>
+          <div class="geo-progress__mongolia">
+            <label for="file">Mongolia</label>
+            <progress id="file" max="100" value="0.13">0.13%</progress>
+          </div>
+
+          <div class="geo-progress__other">
+            <label for="file">Other</label>
+            <progress id="file" max="100" value="1.37">1.37%</progress>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

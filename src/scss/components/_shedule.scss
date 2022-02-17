@@ -1,0 +1,44 @@
+.shedule {
+  width: 715px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #ffffff;
+  border-radius: $rounded;
+  
+  align-items: center;
+
+  &__title {
+    display: grid;
+    justify-self: start;
+
+    font-size: 20px;
+    line-height: 100%;
+    align-content: center;
+  }
+  &__calendar {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
+
+  &__checkbox--total {
+    width: 16px;
+    height: 16px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #7f7fd5;
+    border-radius: 5px;
+  }
+  &__checkbox--follower {
+    width: 16px;
+    height: 16px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #7f7fd5;
+    border-radius: 5px;
+  }
+
+  &__img {
+    grid-column: span 2;
+  }
+}
