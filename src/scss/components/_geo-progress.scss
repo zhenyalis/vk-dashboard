@@ -2,8 +2,6 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 380px;
-  
-
   align-content: space-evenly;
   padding-left: 5%;
   background: #ffffff;
@@ -11,8 +9,7 @@
   margin-right: 30px;
   grid-area: geo-progress;
   height: 240px;
-  
- 
+
   &__title {
     display: grid;
     justify-self: start;
@@ -20,7 +17,7 @@
     line-height: 100%;
   }
   &__country {
-    display:grid;
+    display: grid;
     font-size: 12px;
     line-height: 100%;
     color: #4f4f4f;
@@ -28,7 +25,7 @@
     justify-content: end;
   }
   &__city {
-    display:grid;
+    display: grid;
     font-size: 12px;
     line-height: 100%;
     color: #979797;
@@ -38,12 +35,14 @@
   &__img {
     grid-column: span 3;
   }
-  @include md {grid-column: span 1;;
-    grid-row: span 1;
+  @include md {
+    display: grid;
     margin-left: 30px;
+    justify-items: center;
   }
 }
-.description {display: grid;
+.description {
+  display: grid;
   grid-column: span 2;
   grid-row: span 2;
 }

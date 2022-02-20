@@ -2,17 +2,14 @@
   display: grid;
   grid-template-columns: repeat(3, 324px);
   grid-template-rows: 1fr;
-  background: #EFF3F9;
+  background: #eff3f9;
   grid-area: header;
   border-radius: 0 $rounded 0 0;
   grid-row: span 1;
-  // column-gap: 35px;
-  // row-gap: 35px;
   padding-right: 45px;
   padding-left: 45px;
 
   &__search-form {
-    display: grid;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -33,6 +30,12 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    @include md {
+      display: grid;
+      justify-content: start;
+      justify-items: end;
+      justify-content: space-around
+    }
   }
   &__user-name {
     font-size: 20px;
@@ -43,5 +46,9 @@
     width: 50px;
     height: 50px;
   }
-  @include md{width: 768px;}
+  @include md {
+    display: grid;
+    display: inline-grid;
+    border-radius: 0 0 0 0;
+  }
 }

@@ -11,7 +11,8 @@
     @include md {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(2, 25px);
+      grid-template-rows: repeat(2, 40px);
+      align-items: end;
     }
   }
   &__logo {
@@ -23,14 +24,13 @@
       display: grid;
       margin: 0;
       align-self: center;
-      
     }
   }
   @include md {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    border-radius: $rounded  $rounded 0 0;
   }
-  // height: 100vh;}
 }
 
 .switch {
