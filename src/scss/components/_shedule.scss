@@ -1,16 +1,16 @@
 .shedule {
   width: 715px;
   display: grid;
+margin-left: 30px;
   grid-template-columns: repeat(3, 1fr);
   background: #ffffff;
-  border-radius: $rounded;
-  
+  border-radius: $rounded; 
   align-items: center;
-
+ grid-area: shedule;
+ 
   &__title {
     display: grid;
     justify-self: start;
-
     font-size: 20px;
     line-height: 100%;
     align-content: center;

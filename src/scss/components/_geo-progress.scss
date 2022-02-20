@@ -1,18 +1,18 @@
 .geo-progress {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
- 
-  margin-left: auto;
-  grid-row-start: 3;
-  grid-row-end: 3;
-  grid-column-start: 3;
-  grid-column-end: 3;
+  width: 380px;
+  
+
   align-content: space-evenly;
   padding-left: 5%;
   background: #ffffff;
   border-radius: $rounded;
-  width: 381px;
-
+  margin-right: 30px;
+  grid-area: geo-progress;
+  height: 240px;
+  
+ 
   &__title {
     display: grid;
     justify-self: start;
@@ -37,6 +37,10 @@
   }
   &__img {
     grid-column: span 3;
+  }
+  @include md {grid-column: span 1;;
+    grid-row: span 1;
+    margin-left: 30px;
   }
 }
 .description {display: grid;

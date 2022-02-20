@@ -1,15 +1,14 @@
 .diagram {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-left: auto;
-  grid-row-start: 2;
-  grid-row-end: 2;
-  grid-column-start: 3;
-  grid-column-end: 3;
-  height: 242px;
+  width: 341px;
+  grid-column: span 1;
   background: #ffffff;
   border-radius: $rounded;
   padding-left: 5%;
+  grid-area: diagram;
+  
+
   
 
   &__title {
@@ -34,4 +33,6 @@
     border-radius: 5px;
     background-color: #7f7fd5;
   }
+  @include md {
+    margin-left: 30px;}
 }

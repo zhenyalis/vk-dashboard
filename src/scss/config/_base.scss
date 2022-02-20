@@ -3,7 +3,6 @@ body {
 }
 .app {
   display: grid;
-
   grid-template-columns: 100px 1fr;
   grid-template-rows: 115px 1fr;
   grid-template-areas:
@@ -13,6 +12,12 @@ body {
   min-height: 880px;
   margin: 50px auto 0;
   border-radius: $rounded;
-@include md {flex-wrap: wrap;
-flex-direction: column;}
+  @include md {
+    grid-template-columns: 768px;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "nav"
+      "header"
+      "main";
+  }
 }

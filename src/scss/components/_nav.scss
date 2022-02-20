@@ -3,23 +3,37 @@
   background: #fdfdff;
   grid-area: nav;
   border-radius: $rounded 0 0 $rounded;
-  grid-template-rows: repeat(3, 1fr);
 
   &__links {
     display: grid;
     text-align: center;
     align-content: space-between;
+    @include md {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 25px);
+    }
   }
   &__logo {
     display: grid;
     align-self: start;
     justify-self: center;
     margin-top: 45%;
+    @include md {
+      display: grid;
+      margin: 0;
+      align-self: center;
+      
+    }
   }
+  @include md {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  // height: 100vh;}
 }
 
 .switch {
-  
   position: relative;
   display: inline-block;
   width: 60px;
