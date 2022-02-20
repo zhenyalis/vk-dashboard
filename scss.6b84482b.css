@@ -94,7 +94,8 @@ body {
   .nav__links {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 25px);
+    grid-template-rows: repeat(2, 40px);
+    align-items: end;
   }
 }
 .nav__logo {
@@ -114,6 +115,7 @@ body {
   .nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    border-radius: 14px 14px 0 0;
   }
 }
 
@@ -174,7 +176,7 @@ input:checked + .slider:before {
   display: grid;
   grid-template-columns: repeat(3, 324px);
   grid-template-rows: 1fr;
-  background: #EFF3F9;
+  background: #eff3f9;
   grid-area: header;
   border-radius: 0 14px 0 0;
   grid-row: span 1;
@@ -182,7 +184,6 @@ input:checked + .slider:before {
   padding-left: 45px;
 }
 .header__search-form {
-  display: grid;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -203,6 +204,14 @@ input:checked + .slider:before {
   align-items: center;
   justify-content: flex-end;
 }
+@media (max-width: 768px) {
+  .header__profile {
+    display: grid;
+    justify-content: start;
+    justify-items: end;
+    justify-content: space-around;
+  }
+}
 .header__user-name {
   font-size: 20px;
   line-height: 100%;
@@ -214,7 +223,9 @@ input:checked + .slider:before {
 }
 @media (max-width: 768px) {
   .header {
-    width: 768px;
+    display: grid;
+    display: inline-grid;
+    border-radius: 0 0 0 0;
   }
 }
 
@@ -231,6 +242,8 @@ input:checked + .slider:before {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(7.242px);
     grid-template-areas: "card" "card" "card" "shedule" "diagram" "bar-graph" "geo-progress";
+    border-radius: 0 0 0 0;
+    justify-items: center;
   }
 }
 
@@ -250,7 +263,6 @@ input:checked + .slider:before {
   display: grid;
   justify-content: space-around;
   align-items: center;
-  font-style: Bold;
   font-size: 20px;
   color: #4f4f4f;
 }
@@ -284,8 +296,9 @@ input:checked + .slider:before {
 }
 @media (max-width: 768px) {
   .card {
-    grid-column: span 1;
+    display: grid;
     grid-row: span 1;
+    justify-items: center;
   }
 }
 
@@ -451,9 +464,9 @@ input:checked + .slider:before {
 }
 @media (max-width: 768px) {
   .geo-progress {
-    grid-column: span 1;
-    grid-row: span 1;
+    display: grid;
     margin-left: 30px;
+    justify-items: center;
   }
 }
 
