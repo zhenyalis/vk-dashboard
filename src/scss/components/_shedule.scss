@@ -1,17 +1,17 @@
 .shedule {
-  width: 715px;
   display: grid;
+  align-items: center;
+  width: 715px;
   margin-left: 30px;
   grid-template-columns: repeat(3, 1fr);
   background: #ffffff;
   border-radius: $rounded;
-  align-items: center;
   grid-area: shedule;
 
   &__title {
     display: grid;
     justify-self: start;
-    font-size: 20px;
+    font-size: $xl-text;
     line-height: 100%;
     align-content: center;
   }
@@ -27,7 +27,7 @@
     border-width: 2px;
     border-style: solid;
     border-color: #7f7fd5;
-    border-radius: 5px;
+    border-radius: $round;
   }
   &__checkbox--follower {
     width: 16px;
@@ -35,7 +35,7 @@
     border-width: 2px;
     border-style: solid;
     border-color: #7f7fd5;
-    border-radius: 5px;
+    border-radius: $round;
   }
 
   &__img {

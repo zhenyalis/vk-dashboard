@@ -1,21 +1,24 @@
 .bar-graph {
-  width: 690px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  width: 690px;
+  height: 240px;
+  padding-left: 5%;
+  margin-left: 30px;
   background: #ffffff;
   border-radius: $rounded;
-  padding-left: 5%;
-  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr); 
   grid-area: bar-graph;
-  margin-left: 30px;
-  height: 240px;
   
+  
+
   &__title {
     display: grid;
     justify-self: start;
-    font-size: 20px;
     line-height: 100%;
+    font-size: $xl-text;
+   
   }
   &__checkbox {
     grid-row-start: 1;
@@ -30,12 +33,12 @@
 .bar-graph__checkbox--women {
   width: 16px;
   height: 16px;
-  border-radius: 5px;
+  border-radius: $round;
   background-color: #e786d7;
 }
 .bar-graph__checkbox--men {
   width: 16px;
   height: 16px;
-  border-radius: 5px;
+  border-radius: $round;
   background-color: #7f7fd5;
 }

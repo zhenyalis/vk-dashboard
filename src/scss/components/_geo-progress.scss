@@ -1,35 +1,34 @@
 .geo-progress {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 380px;
   align-content: space-evenly;
+  width: 380px;
+  height: 240px;
   padding-left: 5%;
+  margin-right: 30px;
   background: #ffffff;
   border-radius: $rounded;
-  margin-right: 30px;
+  grid-template-columns: repeat(2, 1fr);
   grid-area: geo-progress;
-  height: 240px;
 
   &__title {
     display: grid;
     justify-self: start;
-    font-size: 20px;
+    font-size: $xl-text;
     line-height: 100%;
   }
   &__country {
     display: grid;
-    font-size: 12px;
+    justify-content: end;
+    font-size: $lg-text;
     line-height: 100%;
     color: #4f4f4f;
-
-    justify-content: end;
   }
   &__city {
     display: grid;
-    font-size: 12px;
+    justify-items: center;
+    font-size: $lg-text;
     line-height: 100%;
     color: #979797;
-    justify-items: center;
     grid-column: span 2;
   }
   &__img {
@@ -37,12 +36,6 @@
   }
   @include md {
     display: grid;
-    margin-left: 30px;
     justify-items: center;
   }
-}
-.description {
-  display: grid;
-  grid-column: span 2;
-  grid-row: span 2;
 }

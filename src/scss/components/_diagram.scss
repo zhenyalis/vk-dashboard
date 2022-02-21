@@ -1,35 +1,36 @@
 .diagram {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   width: 341px;
-  grid-column: span 1;
+  padding-left: 5%;
   background: #ffffff;
   border-radius: $rounded;
-  padding-left: 5%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column: span 1;
   grid-area: diagram;
-  
+
   &__title {
     display: grid;
-    justify-self: start;
-    font-size: 20px;
-    line-height: 100%;
     align-content: center;
+    justify-self: start;
+    font-size: $xl-text;
+    line-height: 100%;
     grid-column: span 2;
   }
   &__checkbox--desktop {
     display: grid;
     width: 16px;
     height: 16px;
-    border-radius: 5px;
+    border-radius: $round;
     background-color: #e786d7;
   }
   &__checkbox--mobole {
     display: grid;
     width: 16px;
     height: 16px;
-    border-radius: 5px;
+    border-radius: $round;
     background-color: #7f7fd5;
   }
   @include md {
-    margin-left: 30px;}
+    margin-left: 30px;
+  }
 }
