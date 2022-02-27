@@ -1,13 +1,9 @@
 .geo-progress {
   display: grid;
-  align-content: space-evenly;
-  width: 380px;
-  height: 240px;
-  padding-left: 5%;
-  margin-right: 30px;
+  padding: 5%;
   background: #ffffff;
   border-radius: $rounded;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-area: geo-progress;
 
   &__title {
@@ -18,10 +14,14 @@
   }
   &__country {
     display: grid;
-    justify-content: end;
+    justify-content: center;
     font-size: $lg-text;
     line-height: 100%;
     color: #4f4f4f;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 3;
+    grid-column-end: 3;
   }
   &__city {
     display: grid;
@@ -29,13 +29,23 @@
     font-size: $lg-text;
     line-height: 100%;
     color: #979797;
-    grid-column: span 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    justify-self: end;
   }
-  &__img {
-    grid-column: span 3;
-  }
+
   @include md {
     display: grid;
     justify-items: center;
+  }
+}
+.country {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column: span 3;
+  @include md {
+    justify-items: end;
   }
 }

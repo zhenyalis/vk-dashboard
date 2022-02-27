@@ -20,4 +20,10 @@ body {
       "header"
       "main";
   }
+  @include sm {
+    grid-template-areas:
+      "nav"
+      "header"
+      "main";
+}
 }

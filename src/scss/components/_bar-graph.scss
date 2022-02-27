@@ -1,24 +1,17 @@
 .bar-graph {
   display: grid;
-  align-items: center;
-  width: 690px;
-  height: 240px;
-  padding-left: 5%;
-  margin-left: 30px;
+  grid-template: auto 1fr / auto auto;
+  padding: 2.3rem 3.4rem 0 1rem;
   background: #ffffff;
   border-radius: $rounded;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr); 
+ 
   grid-area: bar-graph;
-  
-  
-
   &__title {
     display: grid;
     justify-self: start;
     line-height: 100%;
     font-size: $xl-text;
-   
   }
   &__checkbox {
     grid-row-start: 1;

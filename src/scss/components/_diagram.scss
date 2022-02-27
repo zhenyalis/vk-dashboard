@@ -1,7 +1,8 @@
 .diagram {
   display: grid;
+  justify-items: center;
   width: 341px;
-  padding-left: 5%;
+  padding: 2.4rem;
   background: #ffffff;
   border-radius: $rounded;
   grid-template-columns: repeat(2, 1fr);
@@ -12,6 +13,7 @@
     display: grid;
     align-content: center;
     justify-self: start;
+    padding-bottom: 1em;
     font-size: $xl-text;
     line-height: 100%;
     grid-column: span 2;
@@ -29,8 +31,5 @@
     height: 16px;
     border-radius: $round;
     background-color: #7f7fd5;
-  }
-  @include md {
-    margin-left: 30px;
   }
 }

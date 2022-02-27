@@ -2,7 +2,7 @@
   display: grid;
   width: 341px;
   height: 148px;
-  margin-left: 30px;
+  padding: 1.5em;
   border-radius: $rounded;
   background: #ffffff;
   grid-template-columns: repeat(2, 1fr);
@@ -48,7 +48,6 @@
   @include md {
     display: grid;
     justify-items: center;
-    grid-row: span 1;
-    
+    grid-row: span 1;  
   }
 }

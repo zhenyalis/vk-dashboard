@@ -1,14 +1,18 @@
 .header {
   display: grid;
-  grid-template-columns: repeat(3, 324px);
-  grid-template-rows: 1fr;
+  grid-template-columns: 250px 250px 1fr; 
   background: #eff3f9;
   grid-area: header;
   border-radius: 0 $rounded 0 0;
   grid-row: span 1;
-  padding-right: 45px;
-  padding-left: 45px;
-
+  &__title {
+    align-self: center;
+    margin-left: 3em;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    padding-right: 3%;
+  }
   &__search-form {
     display: flex;
     align-items: center;
@@ -26,15 +30,15 @@
     height: 22px;
   }
   &__profile {
-    grid-column: span 2;
     display: flex;
+    grid-column: span 2;
     align-items: center;
     justify-content: flex-end;
     @include md {
       display: grid;
       justify-content: start;
       justify-items: end;
-      justify-content: space-around
+      justify-content: space-around;
     }
   }
   &__user-name {

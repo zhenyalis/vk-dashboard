@@ -1,17 +1,20 @@
 .main {
   display: grid;
-  background: #eff3f9;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 341px);
+  grid-template-rows: 148px 242px 242px;
   grid-template-areas:
     "card card card"
     "shedule shedule diagram"
     "bar-graph bar-graph geo-progress";
-  grid-gap: 1rem;
+  grid-area: main;
+  grid-gap: 2em;
+  padding: 2.5em;
+  background: #eff3f9;
 
   @include md {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(7.242px);
+    grid-template-rows: repeat(3, 150px) repeat(4, 240px);
     grid-template-areas:
       "card"
       "card"
@@ -22,5 +25,19 @@
       "geo-progress";
     border-radius: 0 0 0 0;
     justify-items: center;
+  }
+
+  @include sm {
+    grid-area: 3/1/3/1;
+    grid-template: repeat(3, 200px) repeat(4, 1fr);
+    grid-template-areas:
+      "card"
+      "card"
+      "card"
+      "shedule"
+      "diagram"
+      "bar-graph"
+      "geo-progress";
+    grid-gap: 3.2rem 0;
   }
 }

@@ -3,6 +3,24 @@
   background: #fdfdff;
   grid-area: nav;
   border-radius: $rounded 0 0 $rounded;
+  @include md {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: $rounded $rounded 0 0;
+  }
+  @include sm {
+    grid-area: 1/1/1/1;
+    grid-template-columns: repeat(4, 1fr);
+    .nav__link {
+      display: none;
+    }
+    .nav__menu-btn {
+      display: block;
+      background-color: transparent;
+      width: 20px;
+      height: 20px;
+    }
+  }
 
   &__links {
     display: grid;
@@ -25,11 +43,6 @@
       margin: 0;
       align-self: center;
     }
-  }
-  @include md {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border-radius: $rounded  $rounded 0 0;
   }
 }
 
@@ -86,4 +99,11 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+.nav__menu-btn {
+  display: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 25px;
 }
