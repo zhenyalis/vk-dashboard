@@ -1,12 +1,15 @@
 # vk-dashboard
 <img src='preview.png'>
-- Grid 
-- checkbox
-- Usage `SCSS` (mixins, variables)
-- Сustom Theme-toggle
-- Parsel
-- NPM
-- BEM
+
+
+- scss
+- npm
+- parcel
+- SASS
+- grid
+- npm
+- ckeckbox
+- toggle
 
 https://zhenyalis.github.io/vk-dashboard/
 
