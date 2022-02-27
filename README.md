@@ -1,6 +1,5 @@
 # vk-dashboard
-https://zhenyalis.github.io/vk-dashboard/
-
+<img src='preview.png'>
 - Grid 
 - checkbox
 - Usage `SCSS` (mixins, variables)
@@ -8,5 +7,6 @@ https://zhenyalis.github.io/vk-dashboard/
 - Parsel
 - NPM
 - BEM
-<img src='preview.png'>
+
+https://zhenyalis.github.io/vk-dashboard/
 
