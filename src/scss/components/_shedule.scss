@@ -8,8 +8,8 @@
   background: #ffffff;
   border-radius: $rounded;
   grid-area: shedule;
+
   @include sm {
-    
     grid-template: auto auto auto 1fr / 1fr;
     justify-items: center;
     padding: 1.2rem 2.4rem;
@@ -56,13 +56,14 @@
   }
 
   &__img {
+    width: 100%;
     grid-area: 2/1/2/4;
-    max-width: 100%;
+    @include md {
+      width: 100%;
+    }
     @include sm {
       grid-area: 4/1/4/1;
       width: 100%;
-      max-width: 100%;
-      min-width: 100vmin;
     }
   }
 }

@@ -5,7 +5,7 @@
   background: #ffffff;
   border-radius: $rounded;
   grid-template-columns: repeat(3, 1fr);
- 
+
   grid-area: bar-graph;
   &__title {
     display: grid;
@@ -19,9 +19,14 @@
     grid-column-start: 3;
     grid-column-end: 3;
   }
+  
 }
 .bar-graph__image {
-  grid-column: span 2;
+  grid-column: span 3;
+  @include sm {
+    padding-top: 1.4rem;
+    width: 100%;
+  }
 }
 .bar-graph__checkbox--women {
   width: 16px;

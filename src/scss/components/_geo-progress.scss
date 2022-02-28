@@ -5,12 +5,16 @@
   border-radius: $rounded;
   grid-template-columns: repeat(3, 1fr);
   grid-area: geo-progress;
+  width: 100%;
 
   &__title {
     display: grid;
     justify-self: start;
     font-size: $xl-text;
     line-height: 100%;
+    @include sm {
+      align-items: center;
+    }
   }
   &__country {
     display: grid;
@@ -22,6 +26,11 @@
     grid-row-end: 1;
     grid-column-start: 3;
     grid-column-end: 3;
+
+    @include sm {
+      display: grid;
+      align-items: center;
+    }
   }
   &__city {
     display: grid;
@@ -34,11 +43,18 @@
     grid-column-start: 2;
     grid-column-end: 2;
     justify-self: end;
+    @include sm {
+      display: grid;
+      align-items: center;
+    }
   }
-
   @include md {
     display: grid;
     justify-items: center;
+  }
+  @include sm {
+    display: grid;
+    padding: 2%;
   }
 }
 .country {

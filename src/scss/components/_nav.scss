@@ -10,15 +10,14 @@
   }
   @include sm {
     grid-area: 1/1/1/1;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     .nav__link {
       display: none;
     }
     .nav__menu-btn {
       display: block;
       background-color: transparent;
-      width: 20px;
-      height: 20px;
+      
     }
   }
 
@@ -43,6 +42,7 @@
       margin: 0;
       align-self: center;
     }
+    
   }
 }
 
