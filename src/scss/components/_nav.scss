@@ -15,9 +15,12 @@
       display: none;
     }
     .nav__menu-btn {
+      justify-items: center;
+      justify-self: center;
+      padding: 0;
+      width: 35px;
       display: block;
       background-color: transparent;
-      
     }
   }
 
@@ -42,7 +45,6 @@
       margin: 0;
       align-self: center;
     }
-    
   }
 }
 
@@ -53,6 +55,10 @@
   height: 30px;
   transform: translate(35%, -50%);
   top: 50%;
+  @include sm {
+    position: relative;
+    transform: translate(200%, -50%);
+  }
 }
 
 /* Ползунок */

@@ -1,6 +1,6 @@
 .header {
   display: grid;
-  grid-template-columns: 250px 250px 1fr; 
+  grid-template-columns: 250px 250px 1fr;
   background: #eff3f9;
   grid-area: header;
   border-radius: 0 $rounded 0 0;
@@ -17,7 +17,13 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    @include sm {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
+
 
   &__search {
     width: 153px;
@@ -40,12 +46,20 @@
       justify-items: end;
       justify-content: space-around;
     }
+    @include sm {
+      display: grid;
+      justify-content: end;
+      margin-right: 1rem;
+     
+    }
   }
   &__user-name {
+    justify-self: center;
     font-size: $xl-text;
     line-height: 100%;
   }
   &__avatar {
+    margin-right: 5%;
     margin-left: 15px;
     width: 50px;
     height: 50px;
@@ -55,4 +69,5 @@
     display: inline-grid;
     border-radius: 0 0 0 0;
   }
+  @include sm {padding: 1rem;}
 }
