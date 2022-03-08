@@ -1,11 +1,10 @@
 .diagram {
   display: grid;
   justify-items: center;
-  width: 341px;
   padding: 2.4rem;
   background: #ffffff;
   border-radius: $rounded;
-  grid-template-columns: repeat(2, 1fr)/1fr;
+  grid-template-columns: repeat(2, 1fr);
   grid-column: span 1;
   grid-area: diagram;
 
@@ -33,9 +32,6 @@
     background-color: #7f7fd5;
   }
   @include md {
-    width: 100%;
-  }
-  @include sm {
-    width: 100%;
+    grid-column: span 3;
   }
 }

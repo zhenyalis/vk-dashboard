@@ -5,8 +5,11 @@
   background: #ffffff;
   border-radius: $rounded;
   grid-template-columns: repeat(3, 1fr);
-
   grid-area: bar-graph;
+  @include md {
+    grid-column: span 6;
+  }
+
   &__title {
     display: grid;
     justify-self: start;
@@ -19,7 +22,6 @@
     grid-column-start: 3;
     grid-column-end: 3;
   }
-  
 }
 .bar-graph__image {
   grid-column: span 3;

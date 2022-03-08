@@ -8,13 +8,16 @@
   background: #ffffff;
   border-radius: $rounded;
   grid-area: shedule;
-
+  @include md {
+    grid-area: 2/1/2/4;
+    grid-column: span 6;
+  }
   @include sm {
     grid-template: auto auto auto 1fr / 1fr;
     justify-items: center;
     padding: 1.2rem 2.4rem;
+    grid-area: 4/1/4/3;
   }
-
   &__title {
     font-size: $xl-text;
     line-height: 100%;
@@ -34,7 +37,6 @@
       align-self: end;
     }
   }
-
   &__checkbox--total {
     width: 16px;
     height: 16px;
@@ -54,7 +56,6 @@
     border-color: #7f7fd5;
     border-radius: $round;
   }
-
   &__img {
     width: 100%;
     grid-area: 2/1/2/4;

@@ -33,12 +33,15 @@
       <header class="header">
         <div class="header__search-form">
           <h1 class="header__title">Statistics</h1>
-          <input class="header__search" type="search" placeholder="Search">
+          <input class="header__search" type="search" placeholder="    Search">
           <img class="header__img" src="/bell.3934c95f.png" alt="/">
         </div>
         <div class="header__profile">
           <p class="header__user-name">Anya</p>
           <img class="header__avatar" src="/avatar.4f3b4def.png" alt="/">
+          <button class="header__dropdown-btn">
+            <img src="/dropdown.3aa06230.png" alt="dropdown" class="header__dropdown">
+          </button>
         </div>
       </header>
       <!-- main -->
@@ -107,30 +110,48 @@
           <h2 class="geo__title">Geo</h2>
           <span class="geo__country">Country</span>
           <span class="geo__city">City</span>
-          <div class="country">
-            <div class="geo-progress__ruusia">
-              <label for="file">Russia</label>
-              <progress id="file" max="100" value="94">94%</progress>
+          <div class="geo__progress">
+            <div class="geo-progress__country">
+              <label class="geo-progress__text" for="file">Russia</label>
+              <span class="geo-progress__info">94%</span>
+              <progress class="geo-progress__scale" id="file" max="100" value="94">
+                94%
+              </progress>
             </div>
-            <div class="geo-progress__china">
-              <label for="file">China</label>
-              <progress id="file" max="100" value="0.26">0.26%</progress>
+            <div class="geo-progress__country">
+              <label class="geo-progress__text" for="file">China</label>
+              <span class="geo-progress__info">0,26%</span>
+              <progress class="geo-progress__scale" id="file" max="100" value="0.26">
+                0.26%
+              </progress>
             </div>
-            <div class="geo-progress__ukraine">
-              <label for="file">Ukraine</label>
-              <progress id="file" max="100" value="0.20">0.20%</progress>
+            <div class="geo-progress__country">
+              <label class="geo-progress__text" for="file">Ukraine</label>
+              <span class="geo-progress__info">0,20%</span>
+              <progress class="geo-progress__scale" id="file" max="100" value="0.20">
+                0.20%
+              </progress>
             </div>
-            <div class="geo-progress__usa">
-              <label for="file">USA </label>
-              <progress id="file" max="100" value="0.20">0.20%</progress>
+            <div class="geo-progress__country">
+              <label class="geo-progress__text" for="file">USA </label>
+              <span class="geo-progress__info">0,20%</span>
+              <progress class="geo-progress__scale" id="file" max="100" value="0.20">
+                0.20%
+              </progress>
             </div>
-            <div class="geo-progress__mongolia">
-              <label for="file">Mongolia</label>
-              <progress id="file" max="100" value="0.13">0.13%</progress>
+            <div class="geo-progress__country">
+              <label class="geo-progress__text" for="file">Mongolia</label>
+              <span class="geo-progress__info">0,13%</span>
+              <progress class="geo-progress__scale" id="file" max="100" value="0.13">
+                0.13%
+              </progress>
             </div>
-            <div class="geo-progress__other">
-              <label for="file">Other</label>
-              <progress id="file" max="100" value="1.37">1.37%</progress>
+            <div class="geo-progress__country">
+              <label class="geo-progress__text" for="file">Other</label>
+              <span class="geo-progress__info">1,37%</span>
+              <progress class="geo-progress__scale" id="file" max="100" value="1.37">
+                1.37%
+              </progress>
             </div>
           </div>
         </div>

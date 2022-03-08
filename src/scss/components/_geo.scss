@@ -1,12 +1,11 @@
 .geo {
   display: grid;
-  padding: 5%;
+  padding-top: 5%;
+  padding-left: 3%;
   background: #ffffff;
   border-radius: $rounded;
   grid-template-columns: repeat(3, 1fr);
   grid-area: geo;
-  width: 100%;
-
   &__title {
     display: grid;
     justify-self: start;
@@ -26,7 +25,6 @@
     grid-row-end: 1;
     grid-column-start: 3;
     grid-column-end: 3;
-
     @include sm {
       display: grid;
       align-items: center;
@@ -51,17 +49,39 @@
   @include md {
     display: grid;
     justify-items: center;
+    grid-column: span 3;
   }
   @include sm {
     display: grid;
     padding: 2%;
   }
 }
-.country {
+.geo__progress {
   display: grid;
+  align-items: start;
   grid-template-columns: repeat(2, 1fr);
-  grid-column: span 3;
+  grid-template-rows: repeat(3, 1fr);
+  grid-column: span 4;
   @include md {
     justify-items: end;
   }
+  @include sm {
+    row-gap: 2rem;
+    padding: 1rem 2.9rem;
+  }
+}
+.geo-progress__info {
+  font-size: 12px;
+  line-height: 100%;
+  color: #979797;
+}
+.geo-progress__scale {
+  width: 150px;
+}
+.geo-progress__country {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: flex-end;
 }
