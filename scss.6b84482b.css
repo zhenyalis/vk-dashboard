@@ -153,7 +153,7 @@ body {
 @media (max-width: 576px) {
   .switch {
     position: relative;
-    transform: translate(200%, -50%);
+    transform: translate(225%, -50%);
   }
 }
 
@@ -218,54 +218,55 @@ input:checked + .slider:before {
   grid-row: span 1;
 }
 .header__title {
-  align-self: center;
-  margin-left: 3em;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
-  padding-right: 3%;
 }
 .header__search-form {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  margin-left: 3em;
 }
 @media (max-width: 576px) {
   .header__search-form {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    grid-area: 2/1/2/1;
+    padding-top: 1em;
   }
 }
 .header__search {
+  background: no-repeat url("/loupe.58a3282c.png");
+  background-position: 0 50%;
   width: 153px;
   height: 32px;
+  margin-left: 10%;
   border-radius: 8px;
 }
+.header__dropdown-btn {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+}
 .header__img {
-  object-fit: scale-down;
-  width: 22px;
-  height: 22px;
+  align-items: center;
+  margin-left: 10%;
 }
 .header__profile {
   display: flex;
   grid-column: span 2;
   align-items: center;
   justify-content: flex-end;
-}
-@media (max-width: 768px) {
-  .header__profile {
-    display: grid;
-    justify-content: start;
-    justify-items: end;
-    justify-content: space-around;
-  }
+  margin-right: 2em;
 }
 @media (max-width: 576px) {
   .header__profile {
-    display: grid;
-    justify-content: end;
-    margin-right: 1rem;
+    display: flex;
+    grid-column: span 2;
+    justify-content: center;
   }
 }
 .header__user-name {
@@ -274,20 +275,20 @@ input:checked + .slider:before {
   line-height: 100%;
 }
 .header__avatar {
-  margin-right: 5%;
+  padding-right: 10px;
   margin-left: 15px;
-  width: 50px;
-  height: 50px;
 }
 @media (max-width: 768px) {
   .header {
     display: grid;
     display: inline-grid;
     border-radius: 0 0 0 0;
+    padding-top: 2em;
   }
 }
 @media (max-width: 576px) {
   .header {
+    grid-template: repeat(2, 1fr)/repeat(2, 1fr);
     padding: 1rem;
   }
 }
@@ -296,7 +297,7 @@ input:checked + .slider:before {
   display: grid;
   grid-template-columns: repeat(3, 341px);
   grid-template-rows: 148px 242px 242px;
-  grid-template-areas: "card card card" "shedule shedule diagram" "bar-graph bar-graph geo-progress";
+  grid-template-areas: "card card card" "shedule shedule diagram" "bar-graph bar-graph geo";
   grid-area: main;
   grid-gap: 2em;
   padding: 2.5em;
@@ -305,26 +306,24 @@ input:checked + .slider:before {
 @media (max-width: 768px) {
   .main {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 150px) repeat(4, 240px);
-    grid-template-areas: "card" "card" "card" "shedule" "diagram" "bar-graph" "geo-progress";
-    border-radius: 0 0 0 0;
-    justify-items: center;
+    grid-template: repeat(3, 1fr)/repeat(6, 1fr);
+    grid-template-areas: "card card card card card card" "shedule shedule shedule shedule shedule shedule " "diagram diagram diagram geo geo geo" "bar-graph bar-graph bar-graph bar-graph bar-graph bar-graph ";
+    grid-area: main;
+    padding: 1.5em;
+    grid-gap: 1.5em;
   }
 }
 @media (max-width: 576px) {
   .main {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 150px) repeat(4, 1fr);
-    grid-template-areas: "card" "card" "card" "shedule" "diagram" "bar-graph" "geo-progress";
+    grid-template-areas: "card" "card" "card" "shedule" "diagram" "bar-graph" "geo";
     grid-gap: 3.2rem 0;
   }
 }
 
 .card {
   display: grid;
-  width: 100%;
-  min-width: 341px;
   padding: 1.5em;
   border-radius: 14px;
   background: #ffffff;
@@ -370,13 +369,14 @@ input:checked + .slider:before {
 }
 @media (max-width: 768px) {
   .card {
-    display: grid;
-    justify-items: center;
-    grid-row: span 1;
+    grid-column: span 2;
   }
 }
 @media (max-width: 576px) {
   .card {
+    width: 100%;
+    grid-row: span 1;
+    grid-column: span 5;
     display: grid;
     justify-self: start;
   }
@@ -393,11 +393,18 @@ input:checked + .slider:before {
   border-radius: 14px;
   grid-area: shedule;
 }
+@media (max-width: 768px) {
+  .shedule {
+    grid-area: 2/1/2/4;
+    grid-column: span 6;
+  }
+}
 @media (max-width: 576px) {
   .shedule {
     grid-template: auto auto auto 1fr/1fr;
     justify-items: center;
     padding: 1.2rem 2.4rem;
+    grid-area: 4/1/4/3;
   }
 }
 .shedule__title {
@@ -463,11 +470,10 @@ input:checked + .slider:before {
 .diagram {
   display: grid;
   justify-items: center;
-  width: 341px;
   padding: 2.4rem;
   background: #ffffff;
   border-radius: 14px;
-  grid-template-columns: repeat(2, 1fr)/1fr;
+  grid-template-columns: repeat(2, 1fr);
   grid-column: span 1;
   grid-area: diagram;
 }
@@ -496,12 +502,7 @@ input:checked + .slider:before {
 }
 @media (max-width: 768px) {
   .diagram {
-    width: 100%;
-  }
-}
-@media (max-width: 576px) {
-  .diagram {
-    width: 100%;
+    grid-column: span 3;
   }
 }
 
@@ -513,6 +514,11 @@ input:checked + .slider:before {
   border-radius: 14px;
   grid-template-columns: repeat(3, 1fr);
   grid-area: bar-graph;
+}
+@media (max-width: 768px) {
+  .bar-graph {
+    grid-column: span 6;
+  }
 }
 .bar-graph__title {
   display: grid;
@@ -553,12 +559,12 @@ input:checked + .slider:before {
 
 .geo {
   display: grid;
-  padding: 5%;
+  padding-top: 5%;
+  padding-left: 3%;
   background: #ffffff;
   border-radius: 14px;
   grid-template-columns: repeat(3, 1fr);
-  grid-area: geo-progress;
-  width: 100%;
+  grid-area: geo;
 }
 .geo__title {
   display: grid;
@@ -610,6 +616,7 @@ input:checked + .slider:before {
   .geo {
     display: grid;
     justify-items: center;
+    grid-column: span 3;
   }
 }
 @media (max-width: 576px) {
@@ -619,15 +626,41 @@ input:checked + .slider:before {
   }
 }
 
-.country {
+.geo__progress {
   display: grid;
+  align-items: start;
   grid-template-columns: repeat(2, 1fr);
-  grid-column: span 3;
+  grid-template-rows: repeat(3, 1fr);
+  grid-column: span 4;
 }
 @media (max-width: 768px) {
-  .country {
+  .geo__progress {
     justify-items: end;
   }
+}
+@media (max-width: 576px) {
+  .geo__progress {
+    row-gap: 2rem;
+    padding: 1rem 2.9rem;
+  }
+}
+
+.geo-progress__info {
+  font-size: 12px;
+  line-height: 100%;
+  color: #979797;
+}
+
+.geo-progress__scale {
+  width: 150px;
+}
+
+.geo-progress__country {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: flex-end;
 }
 
 /*# sourceMappingURL=/scss.6b84482b.css.map */
